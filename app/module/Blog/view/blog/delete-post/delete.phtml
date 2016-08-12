@@ -1,0 +1,7 @@
+<h1>U sure u want to delete this post?</h1>
+<h1><?= $this->escapeHtml($this->post->getTitle()) ?></h1>
+
+<form action="<?= $this->url('blog/delete', [], true) ?>" method="POST">
+    <button type="submit" name="validate" value="cancel">Nope, cancel</button>
+    <button type="submit" name="validate" value="delete">Yes, I am sure</button>
+</form>

@@ -1,0 +1,14 @@
+<h1>there we are</h1>
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('blog/edit', ['id' => $this->post->getId()]));
+$form->prepare();
+
+$form->get('submit')->setValue('SAVE');
+
+echo $this->form()->openTag($form);
+
+echo $this->formCollection($form);
+
+echo $this->form()->closeTag();
